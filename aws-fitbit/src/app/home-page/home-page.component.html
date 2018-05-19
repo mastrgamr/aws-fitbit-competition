@@ -1,5 +1,19 @@
-<div class="text-center">
-  <h1>Incentiv</h1>
-  <br>
-  <h1>Catalyst</h1>
+<div class="main-container">
+  <nav>
+    <div class="wrapper-menu" (click)="toggleSidenavOpen()" [ngClass]="{'open': sidenavOpen == true, '': sidenavOpen == false}">
+      <div class="line-menu half start"></div>
+      <div class="line-menu"></div>
+      <div class="line-menu half end"></div>
+    </div>
+  </nav>
+
+  <div class="text-center">
+    <h1>Incentiv</h1>
+    <br>
+    <h1>Catalyst</h1>
+
+    <button class="get-started-button" routerLink="/events">
+      Find Events
+    </button>
+  </div>
 </div>

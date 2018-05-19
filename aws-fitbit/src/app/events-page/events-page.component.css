@@ -1,0 +1,38 @@
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+.overlay {
+  background-color: rgba(52, 59, 66, 0.65);
+  overflow: scroll;
+  height: 100%;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+.event-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.event-list li {
+  background-size: cover;
+  font-size: 2em;
+  color: ghostwhite;
+  height: 6em;
+  width: 100%;
+  margin: 0.7em 0em;
+  background-color: gray;
+  text-align: left;
+}
+.event-list li p {
+  font-size: .4em;
+  font-family: 'FreightSansBook', sans-serif;
+}
+.event-image {
+  height: 100%;
+  background-size: cover;
+}
