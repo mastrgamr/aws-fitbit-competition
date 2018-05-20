@@ -28,8 +28,9 @@ export class EventDetailComponent implements OnInit {
 
   eventSignup() {
     this.sharedService.send("1");
-    setTimeout(() => {},10000)
-    this.sharedService.claim("10");
+    setTimeout(() => {
+      this.sharedService.claim("10");
+    },20000)
   }
 
 }

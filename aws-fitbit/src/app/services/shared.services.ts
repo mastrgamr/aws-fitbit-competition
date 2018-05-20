@@ -18,7 +18,7 @@ export class SharedServices {
 
 
   private _tokenContract: any;
-  private _tokenContractAddress: string = "0xcf75a059f537d108cff6e4ec7d1870bbfb276bfb";
+  private _tokenContractAddress: string = "0xa281747e77bca19e1e0d8cd73825833360a05981";
 
 
   constructor(private http: HttpClient) {
