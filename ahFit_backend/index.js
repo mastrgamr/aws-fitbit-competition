@@ -3,7 +3,9 @@
 const express = require('express')
 const app = express()
 const path = require('path');
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
+
+let db = require('./data/db.json');
 
 // Bypass CORS -- https://enable-cors.org/server_expressjs.html
 app.use(function(req, res, next) {
@@ -18,13 +20,16 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 // The root endpoint strictly to ping the server to see if online
 app.get('/', function (req, res) {
   console.log('req: ', req.query.name)
-  
+  console.log(db)
   res.send({"status" : "OK"})
 })
 
-app.post('/eventData', function (req, res) {
-  var geo = req.body.geo;
-  console.log('TODO: do something with this req.body: ', req.body)
+app.get('/eventData', function (req, res) {
+  var lat = req.query.lat || 0.0;
+  var lon = req.query.lon || 0.0;
+  var steps = req.query.steps || 0;
+  console.log('TODO: do something with this req.body: ', steps)
+  res.send({"status" : 200})
 })
 
 app.get('/events', function (req, res) {
