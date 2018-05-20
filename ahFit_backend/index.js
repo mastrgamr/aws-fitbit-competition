@@ -62,6 +62,6 @@ app.get('/events', function (req, res) {
   res.send(result)
 })
 
-app.listen(3000, function () {
-  console.log('App listening on port 3000!')
+app.listen(4040, function () {
+  console.log('App listening on port 4040!')
 })
