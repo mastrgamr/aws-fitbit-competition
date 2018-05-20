@@ -54,8 +54,8 @@ app.get('/events', function (req, res) {
         "start_date": "2018-05-24T15:12:17.000",
         "end_date": "2018-05-31T15:12:17.000",
         "admission_fee": 1,
-        "current_pool_amount": 5000,
-        "participants": [],
+        "current_pool_amount": 1,
+        "participants": [1],
         "imgUrl": '../../assets/images/swimming.jpg'
       },
       {
