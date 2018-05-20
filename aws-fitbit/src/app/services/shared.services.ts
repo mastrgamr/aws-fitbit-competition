@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as Web3 from 'web3';
+import { Observable } from 'rxjs/Observable';
+import { HttpClient } from '@angular/common/http';
 
 declare let require: any;
 declare let window: any;
@@ -7,13 +9,15 @@ let tokenAbi = require('./tokenContract.json');
 
 @Injectable()
 export class SharedServices {
+    // private getUrl1 = 'http://34.219.124.19:3000/events';
+    private getUrl1 = 'assets/json/events.json';
     private _account: string = null;
     private _web3: any;
   
     private _tokenContract: any;
     private _tokenContractAddress: string = "0xbc84f3bf7dd607a37f9e5848a6333e6c188d926c";
   
-    constructor() {
+    constructor(private http: HttpClient) {
       if (typeof window.web3 !== 'undefined') {
         // Use Mist/MetaMask's provider
         this._web3 = new Web3(window.web3.currentProvider);
@@ -83,5 +87,13 @@ export class SharedServices {
     //         }, function(error,result){console.log(result)})
     //   }
 
+    // For string arrays
+  getAssetJsonArray(): Observable<string[]> {
+    return this.http.get<string[]>(this.getUrl1);
+  }
+  // for single strings
+  // getAssetJson(): Observable<string> {
+  //   return this.http.get<string>(this.getUrl1);
+  // }
 
 }

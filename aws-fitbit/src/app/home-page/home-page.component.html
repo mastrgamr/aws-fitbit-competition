@@ -5,6 +5,9 @@
       <div class="line-menu"></div>
       <div class="line-menu half end"></div>
     </div>
+    <a>
+        <i *ngIf="!sidenavOpen" class="fa fa-user menu-icon" (click)="sidenav.toggle(); toggleSidenav()"></i>
+    </a>
   </nav>
 
   <div class="text-center">

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedService } from '../shared.service';
+import { SharedServices } from '../services/shared.services';
 
 @Component({
   selector: 'app-events-page',
@@ -9,7 +9,7 @@ import { SharedService } from '../shared.service';
 export class EventsPageComponent implements OnInit {
   events: string[];
   sectionType = 'events';
-  constructor(private sharedService: SharedService) { }
+  constructor(private sharedService: SharedServices) { }
 
   ngOnInit() {
     this.getEvents();
