@@ -7,34 +7,27 @@ import { EventsPageComponent } from './events-page/events-page.component';
 import { HomePageModule } from './home-page/home-page.module';
 import { EventsPageModule } from './events-page/events-page.module';
 import { AppRoutingModule } from './app-routing.module';
-<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
-import { SharedService } from './shared.service';
-=======
 import { SharedServices } from './services/shared.services';
->>>>>>> origin/develop
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserProfileModule } from './user-profile/user-profile.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     HomePageModule,
     EventsPageModule,
-<<<<<<< HEAD
+    UserProfileModule,
     HttpClientModule,
-    AppRoutingModule,
-  ],
-  providers: [ SharedService],
-=======
     AppRoutingModule,  
   ],
   providers: [
     SharedServices
   ],
->>>>>>> origin/develop
   bootstrap: [AppComponent]
 })
 export class AppModule { }

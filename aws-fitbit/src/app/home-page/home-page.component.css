@@ -2,20 +2,30 @@ h1 {
   color: ghostwhite;
 }
 nav {
-  background-color: #e2c90b;
+  background-color: #00507F;
   height: 3em;
+  display: flex;
   color: ghostwhite;
+}
+nav a {
+  text-align: right;
+}
+nav i {
+  color: ghostwhite;
+  font-size: 2em;
 }
 .get-started-button {
-  padding: 1em;
+  font-size: 1.5em;
+  padding: 1em 3em;
   border-radius: 50px;
-  background-color: transparent;
-  border-color: ghostwhite;
+  background-color: #00507F;
+  border: none;
   color: ghostwhite;
+  transition: .5s;
 }
 .get-started-button:hover {
-  background-color: #e2c90b;
-  color: #333333;
+  background-color: #0070b2;
+  color: ghostwhite;
   border: none;
 }
 .wrapper-menu {
