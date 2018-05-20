@@ -7,6 +7,9 @@ import { EventsPageComponent } from './events-page/events-page.component';
 import { HomePageModule } from './home-page/home-page.module';
 import { EventsPageModule } from './events-page/events-page.module';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedService } from './shared.service';
+
 
 @NgModule({
   declarations: [
@@ -16,9 +19,10 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     HomePageModule,
     EventsPageModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [ SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

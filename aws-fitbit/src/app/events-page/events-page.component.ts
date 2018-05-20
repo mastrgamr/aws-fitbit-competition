@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-events-page',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./events-page.component.css']
 })
 export class EventsPageComponent implements OnInit {
-
-  constructor() { }
+  events: string[];
+  sectionType = 'events';
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
+    this.getEvents();
+    console.log(this.events);
+  }
+  getEvents(): void{
+    this.sharedService.getAssetJsonArray().subscribe(
+      data => this.events = data[this.sectionType]
+    );
   }
 
 }
