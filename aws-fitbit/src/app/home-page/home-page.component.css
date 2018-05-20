@@ -4,10 +4,15 @@ h1 {
 nav {
   background-color: #00507F;
   height: 3em;
+  display: flex;
   color: ghostwhite;
 }
 nav a {
   text-align: right;
+}
+nav i {
+  color: ghostwhite;
+  font-size: 2em;
 }
 .get-started-button {
   font-size: 1.5em;
