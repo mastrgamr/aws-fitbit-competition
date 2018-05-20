@@ -45,7 +45,8 @@ app.get('/events', function (req, res) {
         "end_date": "2018-05-26T15:12:17.000",
         "admission_fee": 30,
         "current_pool_amount": 1000,
-        "participants": []
+        "participants": [],
+        "imgUrl": '../../assets/images/running.jpg'
       },
       {
         "name": "J.P. Morgan Swim Freestyle",
@@ -54,7 +55,8 @@ app.get('/events', function (req, res) {
         "end_date": "2018-05-31T15:12:17.000",
         "admission_fee": 50,
         "current_pool_amount": 5000,
-        "participants": []
+        "participants": [],
+        "imgUrl": '../../assets/images/swimming.jpg'
       },
       {
         "name": "Tour De NYC, B",
@@ -63,7 +65,8 @@ app.get('/events', function (req, res) {
         "end_date": "2018-05-31T15:12:17.000",
         "admission_fee": 25,
         "current_pool_amount": 1500,
-        "participants": []
+        "participants": [],
+        "imgUrl": '../../assets/images/biking.jpg'
       }
     ]
   }
