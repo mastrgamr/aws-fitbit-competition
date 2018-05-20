@@ -22,11 +22,13 @@ app.get('/', function (req, res) {
   res.send({"status" : "OK"})
 })
 
-app.post('/data', function (req, res) {
-  var user = req.body.username;
-  console.log('req.body: ', req.body)
+app.post('/eventData', function (req, res) {
+  var geo = req.body.geo;
+  console.log('TODO: do something with this req.body: ', req.body)
 })
 
 app.listen(3000, function () {
   console.log('App listening on port 3000!')
 })
+
+curl -i -X "{"geo":}" http://localhost:3000/eventData
