@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedServices } from '../services/shared.services';
 
 @Component({
   selector: 'home-page',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class HomePageComponent implements OnInit {
   sidenavOpen = false;
   
-  constructor() { }
+  constructor(private sharedServices: SharedServices) { 
+    this.sharedServices.getUserBalance().then(balance => console.log(balance));
+  }
 
   ngOnInit() {
   }
