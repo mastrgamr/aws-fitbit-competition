@@ -89,7 +89,7 @@ export class SharedServices {
   public send(valueToSend: String) {
     let betData = this._tokenContract.enter(1, {
       gas: 300000,
-      from: "0xb0129549FC430D0fdcEDf331261f2307ce70B53E",
+      from: "0xdaaf316c80280F930A955141e4fB421AEAE1890a",
       value: this._web3.toWei(valueToSend, 'ether')
     }, (err, result) => {
       console.log(result);
@@ -105,7 +105,7 @@ export class SharedServices {
   public claim(steps: String) {
     let betData = this._tokenContract.claim(steps, {
       gas: 300000,
-      from: "0xb0129549FC430D0fdcEDf331261f2307ce70B53E"
+      from: "0xdaaf316c80280F930A955141e4fB421AEAE1890a"
     }, (err, result) => {
       console.log(result);
     });
