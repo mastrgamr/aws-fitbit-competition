@@ -13,6 +13,10 @@ const routes: Routes = [
     path: 'events',
     loadChildren: 'app/events-page/events-page.module#EventsPageModule'
   },
+  {
+    path: 'user-profile',
+    loadChildren: 'app/events-page/events-page.module#EventsPageModule'
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
