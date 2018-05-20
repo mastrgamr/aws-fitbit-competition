@@ -1,8 +1,14 @@
 <div class="text-center">
   <div class="event-container">
     <ul class="event-list">
-      <li *ngFor="let event of events">
-        <div class="col-xs-4 event-image" style="background-image: url('../../assets/images/running.jpg')">
+      <li *ngFor="let event of events; let i = index;">
+        <div *ngIf="i == 0" class="col-xs-4 event-image" style="background-image: url('../../assets/images/running.jpg')">
+          <!-- <div class="overlay"></div> -->
+        </div>
+        <div *ngIf="i == 1" class="col-xs-4 event-image" style="background-image: url('../../assets/images/swimming.jpg')">
+          <!-- <div class="overlay"></div> -->
+        </div>
+        <div *ngIf="i == 2" class="col-xs-4 event-image" style="background-image: url('../../assets/images/biking.jpg')">
           <!-- <div class="overlay"></div> -->
         </div>
         <div class="col-xs-8">
