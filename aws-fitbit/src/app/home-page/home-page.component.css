@@ -4,7 +4,7 @@ h3 {
   color: ghostwhite;
 }
 nav {
-  background-color: #3dabe0;
+  background-color: #0092d9;
   height: 3em;
   display: flex;
   color: ghostwhite;
@@ -17,8 +17,8 @@ nav i {
   font-size: 2em;
 }
 .title {
-  font-size: 4em;
-  background-color: #3dabe0;
+  font-size: 3em;
+  background-color: #0092d9;
   padding: .25em;
   border-radius: 0px;
 }
@@ -29,13 +29,13 @@ nav i {
   font-size: 1.5em;
   padding: 1em 3em;
   border-radius: 50px;
-  background-color: #3dabe0;
+  background-color: #0092d9;
   border: none;
   color: ghostwhite;
   transition: .5s;
 }
 .get-started-button:hover {
-  background-color: #69bee7;
+  background-color: #0db0ff;
   color: ghostwhite;
   border: none;
 }

@@ -25,7 +25,7 @@ ul {
   height: 6em;
   width: 100%;
   margin: 0.7em 0em;
-  background-color: #3dabe0;
+  background-color: #0092d9;
   text-align: left;
 }
 .event-list li p {
@@ -36,6 +36,12 @@ ul {
   font-size: .6em;
   border: none;
   background-color: #4171ad;
+}
+.details {
+  color: ghostwhite;
+}
+.details:hover {
+  background-color: #0db0ff;
 }
 .event-image {
   height: 100%;
