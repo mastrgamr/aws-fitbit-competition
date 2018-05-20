@@ -1,0 +1,49 @@
+<svg class="title">
+  <text id="titleTxt" x="50%" y="50%+15">CryptoFit Event Complete!</text>
+  
+  <svg id="adidas5k-popup" display="none">
+    <!-- Black background -->
+    <rect class="full-size" fill="fb-black" />
+
+    <!-- Title and text -->
+    <use href="#mixed-text-center-mid" class="dialog-mixed-text" fill="fb-white">
+      <set href="#top-padding" attributeName="display" to="none" />
+      <text id="titleTxt" x="50%" y="50%+15">Adidas 5K</text>
+      <set href="#header/text" attributeName="fill" to="fb-magenta"/>
+      <text id="stepsCount" x="25%" y="85%+15">Steps so far: </text>
+      <set href="#bottom-padding" attributeName="display" to="none" />
+    </use>
+
+    <!-- Right button -->
+    <use id="adidasBtnRight" class="dialog-half-button-right" href="#square-button-negative">
+      <set href="#text" attributeName="text-buffer" to="Stop" />
+      <set href="#text" attributeName="text-anchor" to="middle" />
+    </use>
+  </svg>
+  
+  <svg id="my-popup" display="none">
+    <!-- Black background -->
+    <rect class="full-size" fill="fb-black" />
+
+    <!-- Title and text -->
+    <use href="#mixed-text-center-mid" class="dialog-mixed-text" fill="fb-white">
+      <set href="#top-padding" attributeName="display" to="none" />
+      <set href="#header/text" attributeName="text-buffer" to="Ready, Set, Go" />
+      <set href="#header/text" attributeName="fill" to="fb-magenta"/>
+      <set href="#copy/text" attributeName="text-buffer" to="Are you ready to begin the Adidas 5K!?" />
+      <set href="#bottom-padding" attributeName="display" to="none" />
+    </use>
+
+    <!-- Left button -->
+    <use id="btnLeft" class="dialog-half-button-left" href="#square-button-neutral">
+      <set href="#text" attributeName="text-buffer" to="Later" />
+      <set href="#text" attributeName="text-anchor" to="middle" />
+    </use>
+
+    <!-- Right button -->
+    <use id="btnRight" class="dialog-half-button-right" href="#square-button-negative">
+      <set href="#text" attributeName="text-buffer" to="Start" />
+      <set href="#text" attributeName="text-anchor" to="middle" />
+    </use>
+  </svg>
+</svg>

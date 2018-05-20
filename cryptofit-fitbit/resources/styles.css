@@ -1,0 +1,16 @@
+.title {
+  viewport-fill: white;
+}
+
+#titleTxt {
+  fill: black;
+  font-size: 32;
+  font-family: System-Regular;
+  font-weight: bold;
+  text-anchor: middle;
+  text-length: 99;
+}
+
+#splashScreen {
+  fill: white;
+}

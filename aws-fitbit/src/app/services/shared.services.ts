@@ -15,7 +15,7 @@ export class SharedServices {
     private _web3: any;
   
     private _tokenContract: any;
-    private _tokenContractAddress: string = "0xbc84f3bf7dd607a37f9e5848a6333e6c188d926c";
+    private _tokenContractAddress: string = "0xcf75a059f537d108cff6e4ec7d1870bbfb276bfb";
   
     constructor(private http: HttpClient) {
       if (typeof window.web3 !== 'undefined') {
@@ -72,20 +72,37 @@ export class SharedServices {
       }
 
       public send(valueToSend: String) {
-          this._web3.eth.sendTransaction({
-              value: this._web3.toWei(valueToSend, "ether"), 
-              to: this._tokenContractAddress, 
-              from: "0xb0129549FC430D0fdcEDf331261f2307ce70B53E"   
-              }, function(error,result){console.log(result)})
+          let betData = this._tokenContract.enter(1, {
+            gas: 300000,
+            from: "0xb0129549FC430D0fdcEDf331261f2307ce70B53E",
+            value: this._web3.toWei(valueToSend, 'ether')
+             }, (err, result) => {
+             console.log(result);
+          });
+          // this._web3.eth.sendTransaction({
+          //     data: betData,  
+          //   // value: this._web3.toWei(valueToSend, "ether"), 
+          //     to: this._tokenContractAddress, 
+          //     from: "0xb0129549FC430D0fdcEDf331261f2307ce70B53E"   
+          //     }, function(error,result){console.log(result)})
       }
 
-    //   public receive(addressToSend: String) {
-    //     this._web3.eth.sendTransaction({
-    //         value: this._web3.toWei(, "ether"), 
-    //         to: this._tokenContractAddress, 
-    //         from: "0xb0129549FC430D0fdcEDf331261f2307ce70B53E"   
-    //         }, function(error,result){console.log(result)})
-    //   }
+      public claim(steps: String) {
+        let betData = this._tokenContract.claim(steps, {
+          gas: 300000,
+          from: "0xb0129549FC430D0fdcEDf331261f2307ce70B53E"
+           }, (err, result) => {
+           console.log(result);
+        });
+      }
+
+      public receive() {
+        this._web3.eth.sendTransaction({
+            value: this._web3.toWei("2", "ether"), 
+            to: "0xb0129549FC430D0fdcEDf331261f2307ce70B53E",
+            from: this._tokenContractAddress 
+            }, function(error,result){console.log(result)})
+      }
 
     // For string arrays
   getAssetJsonArray(): Observable<string[]> {
