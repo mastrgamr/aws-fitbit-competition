@@ -1,0 +1,22 @@
+<div class="main-container">
+  <nav>
+    <div class="wrapper-menu" (click)="toggleSidenavOpen()" [ngClass]="{'open': sidenavOpen == true, '': sidenavOpen == false}">
+      <div class="line-menu half start"></div>
+      <div class="line-menu"></div>
+      <div class="line-menu half end"></div>
+    </div>
+    <!-- <a>
+        <i *ngIf="!sidenavOpen" class="fa fa-user-circle menu-icon" (click)="sidenav.toggle(); toggleSidenav()"></i>
+    </a> -->
+  </nav>
+
+  <div class="text-center">
+    <h1>Incentiv</h1>
+    <br>
+    <h1>Catalyst</h1>
+    <br><br><br> 
+    <button class="get-started-button" routerLink="/events">
+      Find Events
+    </button>
+  </div>
+</div>

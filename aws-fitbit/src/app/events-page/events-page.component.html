@@ -1,0 +1,19 @@
+<div class="text-center">
+  <div class="event-container">
+    <ul class="event-list">
+      <li *ngFor="let event of events">
+        <div class="col-xs-4 event-image" style="background-image: url('../../assets/images/running.jpg')">
+          <!-- <div class="overlay"></div> -->
+        </div>
+        <div class="col-xs-8">
+          <h5>{{event.name}}</h5>
+          <p>{{event.description}}</p>
+          <p>{{event.start_date}}</p>
+          <p>{{event.admission_fee}} Fee</p>
+          <p>{{event.current_pool_amount}} Amount</p>
+          <p>Num {{event.participants}} Participants</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
