@@ -14,6 +14,10 @@ const routes: Routes = [
     loadChildren: 'app/events-page/events-page.module#EventsPageModule'
   },
   {
+    path: 'event-detail',
+    loadChildren: 'app/event-detail/event-detail.module#EventDetailModule'
+  },
+  {
     path: 'user-profile',
     loadChildren: 'app/events-page/events-page.module#EventsPageModule'
   },
