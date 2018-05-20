@@ -18,9 +18,9 @@
       </h1>
         <h3>{{events[1].description}}</h3>
         <h5>{{events[1].start_date}}</h5>
-        <p>{{events[1].admission_fee}} Fee</p>
-        <p>{{events[1].current_pool_amount}} Amount</p>
-        <p> 36 Participants</p>
+        <p>Admission Fee: {{events[1].admission_fee}}ETH </p>
+        <p>Total Pool Amount: {{events[1].current_pool_amount}}ETH</p>
+        <p> {{events[1].participants}} Participants</p>
     </div>
-    <button (click)="eventSignup()">Join Event</button>
+    <button class="btn btn-primary" (click)="eventSignup()">Join Event</button>
   </div>
