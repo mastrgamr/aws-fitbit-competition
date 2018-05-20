@@ -9,8 +9,8 @@ import { EventsPageModule } from './events-page/events-page.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedServices } from './services/shared.services';
-import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserProfileModule } from './user-profile/user-profile.module';
+import { EventDetailModule } from './event-detail/event-detail.module';
 
 
 @NgModule({
@@ -22,6 +22,7 @@ import { UserProfileModule } from './user-profile/user-profile.module';
     HomePageModule,
     EventsPageModule,
     UserProfileModule,
+    EventDetailModule,
     HttpClientModule,
     AppRoutingModule,  
   ],

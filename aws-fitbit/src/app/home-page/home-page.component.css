@@ -1,4 +1,6 @@
-h1 {
+h1,
+h2,
+h3 {
   color: ghostwhite;
 }
 nav {
@@ -13,6 +15,15 @@ nav a {
 nav i {
   color: ghostwhite;
   font-size: 2em;
+}
+.title {
+  font-size: 4em;
+  background-color: #00507F;
+  padding: .25em;
+  border-radius: 0px;
+}
+.home-page {
+  padding: 2em;
 }
 .get-started-button {
   font-size: 1.5em;

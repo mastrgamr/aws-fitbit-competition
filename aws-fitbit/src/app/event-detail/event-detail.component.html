@@ -1,0 +1,25 @@
+<div *ngIf="finishedEvent" class="event-detail-container">
+  <div class="overlay">
+      <h1>{{events[0].name}}: 
+        <span>Finished</span>
+    </h1>
+      <h3>{{events[0].description}}</h3>
+      <h5>{{events[0].start_date}}</h5>
+      <p>{{events[0].admission_fee}} Fee</p>
+      <p>{{events[0].current_pool_amount}} Amount</p>
+      <p> 29 Participants</p>
+  </div>
+</div>
+
+<div *ngIf="!finishedEvent" class="event-detail-container">
+    <div class="overlay">
+        <h1>{{events[1].name}}: 
+          <span>In Progress</span>
+      </h1>
+        <h3>{{events[1].description}}</h3>
+        <h5>{{events[1].start_date}}</h5>
+        <p>{{events[1].admission_fee}} Fee</p>
+        <p>{{events[1].current_pool_amount}} Amount</p>
+        <p> 36 Participants</p>
+    </div>
+  </div>

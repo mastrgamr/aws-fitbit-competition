@@ -9,35 +9,48 @@ let tokenAbi = require('./tokenContract.json');
 
 @Injectable()
 export class SharedServices {
-    // private getUrl1 = 'http://34.219.124.19:3000/events';
-    private getUrl1 = 'assets/json/events.json';
-    private _account: string = null;
-    private _web3: any;
+  finshedEvent = false;
+  private getUrl1 = 'http://34.217.69.68:4040/events';
+  // private getUrl1 = 'assets/json/events.json';
+  private eventDetailComplete = false;
+  private _account: string = null;
+  private _web3: any;
   
-    private _tokenContract: any;
-    private _tokenContractAddress: string = "0xbc84f3bf7dd607a37f9e5848a6333e6c188d926c";
+  private _tokenContract: any;
+  private _tokenContractAddress: string = "0xbc84f3bf7dd607a37f9e5848a6333e6c188d926c";
   
-    constructor(private http: HttpClient) {
-      if (typeof window.web3 !== 'undefined') {
-        // Use Mist/MetaMask's provider
-        this._web3 = new Web3(window.web3.currentProvider);
-      } else {
-        console.warn(
-          'Please use a dapp browser like mist or MetaMask plugin for chrome'
-        );
-      }
-  
-      this._tokenContract = this._web3.eth.contract(tokenAbi).at(this._tokenContractAddress);
+  constructor(private http: HttpClient) {
+    this.setFinishedEvent(true);
+    if (typeof window.web3 !== 'undefined') {
+      // Use Mist/MetaMask's provider
+      this._web3 = new Web3(window.web3.currentProvider);
+    } else {
+      console.warn(
+        'Please use a dapp browser like mist or MetaMask plugin for chrome'
+      );
     }
+    
+    this._tokenContract = this._web3.eth.contract(tokenAbi).at(this._tokenContractAddress);
+  }
 
-    public async getAccount(): Promise<string> {
-        if (this._account == null) {
-          this._account = await new Promise((resolve, reject) => {
-            this._web3.eth.getAccounts((err, accs) => {
-              if (err != null) {
-                console.log('There was an error fetching your accounts.');
-                return;
-              }
+  ngOnInit(){
+    
+  }
+  
+  setFinishedEvent(value: boolean){
+    this.finshedEvent = value;
+  }
+  getFinishedEvent(){
+    return this.finshedEvent;
+  }
+  public async getAccount(): Promise<string> {
+    if (this._account == null) {
+      this._account = await new Promise((resolve, reject) => {
+        this._web3.eth.getAccounts((err, accs) => {
+          if (err != null) {
+            console.log('There was an error fetching your accounts.');
+            return;
+          }
       
               if (accs.length === 0) {
                 console.log(

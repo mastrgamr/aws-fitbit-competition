@@ -25,12 +25,16 @@ ul {
   height: 6em;
   width: 100%;
   margin: 0.7em 0em;
-  background-color: #4171ad;
+  background-color: #00507F;
   text-align: left;
 }
 .event-list li p {
   font-size: .3em;
   font-family: 'FreightSansBook', sans-serif;
+}
+.event-list li button {
+  font-size: .35em;
+  background-color: #ca7300;
 }
 .event-image {
   height: 100%;
