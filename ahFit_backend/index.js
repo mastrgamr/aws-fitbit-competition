@@ -29,7 +29,10 @@ app.get('/eventData', function (req, res) {
   var lon = req.query.lon || 0.0;
   var steps = req.query.steps || 0;
   console.log('TODO: do something with this req.body: ', steps)
-  res.send({"status" : 200})
+  res.send({
+    "status" : 200,
+    "steps": steps
+  })
 })
 
 app.get('/events', function (req, res) {
