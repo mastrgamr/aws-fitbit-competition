@@ -49,7 +49,7 @@ contract Challenge {
    function claim(uint number) {
       assert(checkPlayerExists(msg.sender) == true);
       msg.sender.transfer(totalPool);
-      resetData()
+      resetData();
    }
 
    function resetData(){
