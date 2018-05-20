@@ -49,7 +49,7 @@ app.get('/events', function (req, res) {
         "imgUrl": '../../assets/images/running.jpg'
       },
       {
-        "name": "J.P. Morgan Swim Freestyle",
+        "name": "YMCA Swim Freestyle",
         "description": "Compete to be the fastest swimmer in this freestyle swimming event!",
         "start_date": "2018-05-24T15:12:17.000",
         "end_date": "2018-05-31T15:12:17.000",
